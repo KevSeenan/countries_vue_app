@@ -3,8 +3,8 @@
     <h1>Countries</h1>
     <div class="main-container">
       <!-- <countries-list :countries='countries'></countries-list> -->
-      <country-detail v-if="selectedCountry" :country="selectedCountry"></country-detail>
       <country-select :countries='countries'></country-select>
+      <country-detail v-if="selectedCountry" :country="selectedCountry"></country-detail>
     </div>
   </div>
 </template>
@@ -43,7 +43,7 @@ export default {
 
 <style>
   .main-container {
-    display: flex;
+    display: block;
     justify-content: space-between;
   }
 </style>
