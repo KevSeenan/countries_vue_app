@@ -20,6 +20,6 @@ export default {
 
 <style lang="css" scoped>
 .flag-image {
-  width: 100px;
+  width: 250px;
 }
 </style>
