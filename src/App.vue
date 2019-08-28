@@ -2,16 +2,18 @@
   <div>
     <h1>Countries</h1>
     <div class="main-container">
-      <countries-list :countries='countries'></countries-list>
+      <!-- <countries-list :countries='countries'></countries-list> -->
       <country-detail v-if="selectedCountry" :country="selectedCountry"></country-detail>
+      <country-select :countries='countries'></country-select>
     </div>
   </div>
 </template>
 
 <script>
 
-import CountriesList from './components/CountriesList.vue';
+// import CountriesList from './components/CountriesList.vue';
 import CountryDetail from './components/CountryDetail.vue';
+import CountrySelect from './components/CountrySelect.vue';
 import {eventBus} from './main.js';
 
 export default {
@@ -32,8 +34,9 @@ export default {
     })
   },
   components: {
-    "countries-list": CountriesList,
-    "country-detail": CountryDetail
+    // "countries-list": CountriesList,
+    "country-detail": CountryDetail,
+    "country-select": CountrySelect
   }
 }
 </script>
