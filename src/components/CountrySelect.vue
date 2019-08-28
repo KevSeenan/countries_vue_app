@@ -6,10 +6,13 @@
       <option v-for="(country, index) in countries" :value="country" :key="index">{{country.name}}</option>
     </select>
 
-    <label for="site-search">Search Countries:</label>
+    <label for="country-select">Search Countries:</label>
     <input type="search" id="site-search">
+    <datalist>
+      <option v-for="(country, index) in countries" :value="country" :key="index">{{country.name}}></option>
+    </datalist>
 
-    <button>Search</button>
+    <button v-model="country" v-on:click="handleClick">Search</button>
 
   </div>
 </select>
@@ -29,6 +32,10 @@ export default {
   methods: {
     handleChange(){
       eventBus.$emit('country-selected', this.country);
+    },
+    handleClick(){
+      eventBus.$emit('country-selected', this.country);
+      console.log('Hello');
     }
   }
 }
